@@ -1,5 +1,20 @@
 version: "3.8"
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5000/labtech_db
+      SPRING_DATASOURCE_USERNAME: labtech
+      SPRING_DATASOURCE_PASSWORD: labtech
+    volumes:
+      - ./uploads:/app/uploads
+
   db:
     container_name: labtech_db
     image: postgres:15

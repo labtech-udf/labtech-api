@@ -1,4 +1,4 @@
-package br.com.labtech.generic;
+package br.com.labtech.utils;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package br.com.labtech.evento;
 
-import br.com.labtech.generic.GenericServiceImpl;
+import br.com.labtech.utils.GenericServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
