@@ -1,23 +1,18 @@
 package br.com.labtech.utils.files;
 
-import br.com.labtech.arquivo.Arquivo;
-import br.com.labtech.arquivo.ArquivoService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.UUID;
 
 @Service
 public class LocalFileStorageService implements FileStorageService {
@@ -33,7 +28,7 @@ public class LocalFileStorageService implements FileStorageService {
     }
   }
 
-  public void  storeFile(String fileName, MultipartFile file){
+  public void storeFile(String fileName, MultipartFile file) {
     try {
       Path targetLocation = this.fileStorageLocation.resolve(fileName);
 
@@ -69,6 +64,15 @@ public class LocalFileStorageService implements FileStorageService {
       }
     } catch (MalformedURLException ex) {
       throw new FileNotFoundException("File not found " + fileName);
+    }
+  }
+
+  public void delete(String fileName) {
+    try {
+      Path filePath = this.fileStorageLocation.resolve(fileName).normalize();
+      Files.delete(filePath);
+    } catch (IOException ex) {
+      throw new RuntimeException("Falha ao excluir o arquivo " + fileName, ex);
     }
   }
 }

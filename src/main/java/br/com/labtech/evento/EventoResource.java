@@ -32,7 +32,7 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
   }
 
   @PostMapping(value = "", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-  public ResponseEntity criarEvento(@RequestPart("evento") String evento, @RequestPart("file") MultipartFile file
+  public ResponseEntity insert(@RequestPart("evento") String evento, @RequestPart("file") MultipartFile file
   ) throws Exception {
     ObjectMapper objectMapper = new ObjectMapper();
     EventoDTO eventoDTO = objectMapper.readValue(evento, EventoDTO.class);
@@ -44,5 +44,25 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
 
     return super.createObject(eventoDTO);
   }
+
+  @PutMapping(value = "", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+  public ResponseEntity update(@RequestPart("evento") String evento, @RequestPart("file") MultipartFile file) throws Exception {
+    ObjectMapper objectMapper = new ObjectMapper();
+    EventoDTO eventoDTO = objectMapper.readValue(evento, EventoDTO.class);
+    if (eventoDTO.getPhoto() != null && eventoDTO.getPhoto().getId() != null) {
+      if (!file.isEmpty()) {
+        ArquivoDTO arquivo = arquivoService.update(eventoDTO.getPhoto().getId(), file);
+        eventoDTO.setPhoto(arquivo);
+      }
+    } else {
+      if (!file.isEmpty()) {
+        ArquivoDTO arquivo = arquivoService.insert(file);
+        eventoDTO.setPhoto(arquivo);
+      }
+    }
+
+    return super.createObject(eventoDTO);
+  }
+
 
 }

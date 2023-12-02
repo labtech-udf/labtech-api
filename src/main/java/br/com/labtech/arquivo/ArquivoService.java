@@ -13,6 +13,8 @@ public interface ArquivoService extends GenericService<ArquivoDTO> {
 
   ArquivoDTO insert(MultipartFile file) throws Exception;
 
+  ArquivoDTO update(Long id, MultipartFile file) throws Exception;
+
   ArquivoDTO findById(Long id);
 
   Resource download(Long id) throws Exception;

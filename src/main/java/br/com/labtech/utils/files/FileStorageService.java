@@ -11,4 +11,6 @@ public interface FileStorageService {
 
   Resource loadFileAsResource(String fileName) throws Exception;
 
+  void delete(String fileName);
+
 }
