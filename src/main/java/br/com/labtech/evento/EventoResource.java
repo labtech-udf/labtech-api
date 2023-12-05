@@ -1,5 +1,6 @@
 package br.com.labtech.evento;
 
+import br.com.labtech.enums.Status;
 import br.com.labtech.arquivo.ArquivoDTO;
 import br.com.labtech.arquivo.ArquivoService;
 import br.com.labtech.utils.GenericResource;
@@ -36,6 +37,7 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
   ) throws Exception {
     ObjectMapper objectMapper = new ObjectMapper();
     EventoDTO eventoDTO = objectMapper.readValue(evento, EventoDTO.class);
+    eventoDTO.setStatus(Status.C);
 
     if (!file.isEmpty()) {
       ArquivoDTO arquivo = arquivoService.insert(file);
@@ -64,5 +66,10 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
     return super.createObject(eventoDTO);
   }
 
+  @DeleteMapping("")
+  public  ResponseEntity delete(@RequestParam Long id) throws Exception {
+    super.delete(id);
+    return ResponseEntity.noContent().build();
+  }
 
 }
