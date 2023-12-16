@@ -30,9 +30,10 @@ public class Evento extends AbstractEntity {
   @ManyToOne
   private Arquivo photo;
 
+  @Column(columnDefinition = "TEXT")
   private String description;
 
-  private LocalDateTime dateHora;
+  private String dateHora;
 
   private String address;
 
@@ -41,7 +42,7 @@ public class Evento extends AbstractEntity {
   @Enumerated(EnumType.STRING)
   private Status status;
 
-  @ManyToMany
+  @ManyToMany()
   @JoinTable(
     name = "evento_categoria",
     joinColumns = @JoinColumn(name = "evento_id"),

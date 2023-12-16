@@ -23,23 +23,23 @@ import java.util.Set;
 @EqualsAndHashCode(callSuper = false)
 public class EventoDTO extends AbstractEntityDTO {
 
-    private String name;
+  private String name;
 
-    private String nameCard;
+  private String nameCard;
 
-    private ArquivoDTO photo;
+  private ArquivoDTO photo;
 
-    private String description;
+  private String description;
 
-    private LocalDateTime dateHora;
+  private String dateHora;
 
-    private String address;
+  private String address;
 
-    private String cor;
+  private String cor;
 
-    @Enumerated(EnumType.STRING)
-    private Status status;
+  @Enumerated(EnumType.STRING)
+  private Status status;
 
-    private Set<EventoCategoriaDTO> categorias;
+  private Set<EventoCategoriaDTO> categorias;
 
 }

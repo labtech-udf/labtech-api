@@ -5,6 +5,7 @@ import br.com.labtech.utils.GenericServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EventoServiceImpl extends GenericServiceImpl<Evento, EventoDTO> implements EventoService {
@@ -26,4 +27,10 @@ public class EventoServiceImpl extends GenericServiceImpl<Evento, EventoDTO> imp
     return this.mapper.toDto(listEvento);
   }
 
+  @Override
+  public EventoDTO findById(Long id) {
+    Optional<Evento> eventoOptional = repository.findById(id);
+    return eventoOptional.map(mapper::toDto)
+      .orElse(null);
+  }
 }
