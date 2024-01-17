@@ -1,4 +1,4 @@
-package br.com.labtech.ods;
+package br.com.labtech.objDesenSus;
 
 import br.com.labtech.utils.AbstractEntityDTO;
 import lombok.*;
