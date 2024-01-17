@@ -4,6 +4,7 @@ import br.com.labtech.arquivo.Arquivo;
 import br.com.labtech.constants.SchemaConstants;
 import br.com.labtech.enums.Status;
 import br.com.labtech.eventoCategoria.EventoCategoria;
+import br.com.labtech.objDesenSus.ObjDesenSus;
 import br.com.labtech.utils.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,7 +12,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -49,5 +49,13 @@ public class Evento extends AbstractEntity {
     inverseJoinColumns = @JoinColumn(name = "evento_categoria_id")
   )
   private Set<EventoCategoria> categorias = new HashSet<>();
+
+  @ManyToMany
+  @JoinTable(
+    name = "evento_ods",
+    joinColumns = @JoinColumn(name = "evento_id"),
+    inverseJoinColumns = @JoinColumn(name = "ods_id")
+  )
+  private Set<ObjDesenSus> ods = new HashSet<>();
 
 }
