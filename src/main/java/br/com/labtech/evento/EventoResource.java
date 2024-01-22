@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -17,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("evento")
-@Tag(name = "Evento", description = "Este é um resource de evento")
+@Tag(name = "Evento", description = "Gerenciamento de Eventos")
 public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
 
   private final EventoService service;

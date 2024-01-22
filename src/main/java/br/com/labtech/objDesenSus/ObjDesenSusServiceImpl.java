@@ -1,9 +1,11 @@
 package br.com.labtech.objDesenSus;
 
 import br.com.labtech.utils.GenericServiceImpl;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ObjDesenSusServiceImpl extends GenericServiceImpl<ObjDesenSus, ObjDesenSusDTO> implements ObjDesenSusService {
 
   private final ObjDesenSusRepository repository;
@@ -23,6 +25,7 @@ public class ObjDesenSusServiceImpl extends GenericServiceImpl<ObjDesenSus, ObjD
 
   @Override
   public List<ObjDesenSusDTO> findAll() {
-    return null;
+    List<ObjDesenSus> list = this.repository.findAllByExcluded(Boolean.FALSE);
+    return this.mapper.toDto(list);
   }
 }
