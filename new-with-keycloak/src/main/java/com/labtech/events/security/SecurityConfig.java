@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
@@ -22,7 +24,20 @@ public class SecurityConfig {
 //        .jwt(jwt -> jwt.jwtAuthenticationConverter(new JWTConverter()))
 //
 //      )
+      .cors(Customizer.withDefaults())
       .build();
+  }
+
+  @Bean
+  public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+      @Override
+      public void addCorsMappings(final CorsRegistry registry) {
+        registry.addMapping("/**")
+          .allowedMethods("POST", "GET", "PUT", "DELETE", "OPTIONS")
+          .allowedHeaders("*");
+      }
+    };
   }
 
 }
