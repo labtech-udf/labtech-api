@@ -56,7 +56,10 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
       obj.setCategorias(null);
 
       if (!file.isEmpty()) {
-        obj.setPhoto(obj.getId() != null ? arquivoService.update(obj.getPhoto().getId(), file) : arquivoService.insert(file));
+        obj.setPhoto(obj.getId() != null ?
+          arquivoService.update(obj.getPhoto().getId(), file) :
+          arquivoService.insert(file)
+        );
       }
 
       if (obj.getId() != null) {

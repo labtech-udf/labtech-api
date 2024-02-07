@@ -1,0 +1,25 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: labtech_db
+      POSTGRES_USER: labtech
+      POSTGRES_PASSWORD: labtech
+    ports:
+      - '4002:5432'
+
+  keycloak:
+    image: jboss/keycloak:latest
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: labtech_db
+      DB_USER: labtech
+      DB_PASSWORD: labtech
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    ports:
+      - 8090:8080
+    depends_on:
+      - postgres

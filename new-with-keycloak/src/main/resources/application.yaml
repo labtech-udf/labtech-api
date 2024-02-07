@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: Labtech - Events API
+    version: v0-Alpha
+  security:
+    user:
+      name: labtech
+      password: labtech
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:4002/labtech_db}
+    driver-class-name: org.postgresql.Driver
+    password: ${POSTGRES_PASSWORD:labtech}
+    username: ${POSTGRES_USER:labtech}
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: url
+#          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+server:
+  port: 8081
