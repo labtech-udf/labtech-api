@@ -11,6 +11,13 @@ spring:
     driver-class-name: org.postgresql.Driver
     password: ${POSTGRES_PASSWORD:labtech}
     username: ${POSTGRES_USER:labtech}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
 #    oauth2:
 #      resourceserver:
 #        jwt:
