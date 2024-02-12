@@ -6,6 +6,10 @@ spring:
     user:
       name: labtech
       password: labtech
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/realms/labtech-events-realm
   datasource:
     url: ${POSTGRES_URL:jdbc:postgresql://localhost:4002/labtech_db}
     driver-class-name: org.postgresql.Driver

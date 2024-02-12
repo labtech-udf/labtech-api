@@ -1,22 +1,43 @@
 package com.labtech.events.auth;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.labtech.events.security.CustomJwt;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/token")
+import java.text.MessageFormat;
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 public class TokenController {
 
-  @PostMapping("/")
-  public String token(@RequestBody User user) {
-    HttpHeaders headers = new HttpHeaders();
-    return "Sim";
+  @GetMapping("/token")
+  @PreAuthorize("hasAuthority('ROLE_PROFESSOR')")
+  public Message hello() {
+    var jwt = (CustomJwt) SecurityContextHolder.getContext().getAuthentication();
+    var message = MessageFormat.format(
+      "Hello {0} {1}, Bem vindo!",
+      jwt.getName(), jwt.getLastname()
+    );
+    return new Message(message);
+
   }
 
-  public record User() {
+  public record Message(String message) {
 
   }
+
+  @GetMapping("/public/get")
+  public ResponseEntity<String> getText() throws JsonProcessingException {
+    String message = "Working no user login";
+    // Create a JSON object with the desired key-value pairs
+    Map<String, String> response = new HashMap<>();
+    response.put("message", message);
+    return ResponseEntity.ok(new ObjectMapper().writeValueAsString(response));
+  }
+
 }

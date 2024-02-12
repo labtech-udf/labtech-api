@@ -1,25 +1,40 @@
 version: '3'
+networks:
+  internal-network:
+
 services:
   postgres:
-    image: postgres:15
+    image: postgres:14
     environment:
       POSTGRES_DB: labtech_db
       POSTGRES_USER: labtech
       POSTGRES_PASSWORD: labtech
+    networks:
+      - internal-network
     ports:
       - '4002:5432'
 
   keycloak:
-    image: jboss/keycloak:latest
+    image: bitnami/keycloak:23.0.6
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
       DB_DATABASE: labtech_db
       DB_USER: labtech
       DB_PASSWORD: labtech
-      KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_ADMIN: user
+      KEYCLOAK_ADMIN_PASSWORD: bitnami
+    networks:
+      - internal-network
     ports:
       - 8090:8080
     depends_on:
       - postgres
+    volumes:
+      - ./realm-config.json:/opt/keycloak/data/import
+    command: [ "/opt/keycloak/bin/kc.sh",
+               "start",
+               "--import-realm",
+               "--import-file",
+               "/opt/keycloak/data/import/realm-config.json"]
+
