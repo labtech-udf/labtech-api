@@ -29,7 +29,7 @@ services:
       POSTGRES_USER: labtech
     volumes:
       - pg_data:/var/lib/postgresql/data
-      - ./src/main/resources/scripts/initialDb.sql:/docker-entrypoint-initdb.d/001_initialDb.sql
+      - ./src/main/resources/scripts/init.sql:/docker-entrypoint-initdb.d/001_init.sql
     command: -p 5000
 
 volumes:

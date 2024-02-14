@@ -2,36 +2,28 @@ package com.labtech.events.auth;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.labtech.events.security.CustomJwt;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class TokenController {
-
-  @GetMapping("/token")
-  @PreAuthorize("hasAuthority('ROLE_PROFESSOR')")
-  public Message hello() {
-    var jwt = (CustomJwt) SecurityContextHolder.getContext().getAuthentication();
-    var message = MessageFormat.format(
-      "Hello {0} {1}, Bem vindo!",
-      jwt.getName(), jwt.getLastname()
-    );
-    return new Message(message);
+  @GetMapping("/api/token")
+  @PreAuthorize("hasRole('ADMIN')")
+  public ResponseEntity<String> hello() throws JsonProcessingException {
+    String message = "ipdasjiodasio";
+    // Create a JSON object with the desired key-value pairs
+    Map<String, String> response = new HashMap<>();
+    response.put("message", message);
+    return ResponseEntity.ok(new ObjectMapper().writeValueAsString(response));
 
   }
 
-  public record Message(String message) {
-
-  }
-
-  @GetMapping("/public/get")
+  @GetMapping("/api/public/get")
   public ResponseEntity<String> getText() throws JsonProcessingException {
     String message = "Working no user login";
     // Create a JSON object with the desired key-value pairs

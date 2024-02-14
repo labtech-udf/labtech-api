@@ -30,11 +30,4 @@ services:
       - 8090:8080
     depends_on:
       - postgres
-    volumes:
-      - ./realm-config.json:/opt/keycloak/data/import
-    command: [ "/opt/keycloak/bin/kc.sh",
-               "start",
-               "--import-realm",
-               "--import-file",
-               "/opt/keycloak/data/import/realm-config.json"]
 

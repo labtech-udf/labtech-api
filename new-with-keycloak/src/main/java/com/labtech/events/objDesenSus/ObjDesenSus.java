@@ -1,4 +1,5 @@
-package com.labtech.events.files;
+package com.labtech.events.objDesenSus;
+
 
 import com.labtech.events.constants.SchemaConstants;
 import com.labtech.events.utils.AbstractEntity;
@@ -9,16 +10,19 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
+@EqualsAndHashCode(callSuper = false)
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = false)
-@Table(name = "Arquivo_tb", schema = SchemaConstants.EVENTOS)
-public class Arquivo extends AbstractEntity {
-  String name;
-  String type;
-  String url;
-  Long size;
-  String key;
+@Entity
+@Table(name = "Ods_tb", schema = SchemaConstants.EVENTOS)
+public class ObjDesenSus extends AbstractEntity {
+//  Objetivo de Desenvolvimento Sustentável
+
+  private String name;
+
+  private String description;
+
+  private boolean status;
+
 }

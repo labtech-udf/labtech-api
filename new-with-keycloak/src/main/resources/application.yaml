@@ -9,12 +9,15 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8090/realms/labtech-events-realm
+          issuer-uri: ${URL_ISSUER:http://localhost:8090/realms/labtech-events-realm}
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
   datasource:
     url: ${POSTGRES_URL:jdbc:postgresql://localhost:4002/labtech_db}
     driver-class-name: org.postgresql.Driver
     password: ${POSTGRES_PASSWORD:labtech}
     username: ${POSTGRES_USER:labtech}
+    hikari:
+      schema: eventos
   jpa:
     hibernate:
       ddl-auto: none
@@ -27,8 +30,11 @@ spring:
 springdoc:
   api-docs:
     path: /api-docs
+    version: openapi_3_1
   swagger-ui:
     path: /swagger-ui.html
     operationsSorter: method
 server:
   port: 8081
+api:
+  front: ${API-url:http://localhost:4200}
