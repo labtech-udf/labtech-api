@@ -2,7 +2,6 @@ package com.labtech.events.security;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -18,10 +17,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableMethodSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-
-  @Value("${api.front}")
-  private String origins;
-
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
@@ -29,16 +24,10 @@ public class SecurityConfig {
       .authorizeHttpRequests(authorize -> authorize
         .requestMatchers(
           "/api/public/**",
-          "/v3/api-docs",
-          "/v3/api-docs/**",
-          "/swagger-resources",
-          "/swagger-resources/**",
-          "/configuration/ui",
-          "/configuration/security",
           "/swagger-ui/**",
-          "//swagger-ui/index.html",
-          "/webjars/**",
-          "/swagger-ui.html*"
+          "/swagger-resources/*",
+          "/v3/api-docs/**",
+          "/api-docs/**"
         ).permitAll()
         .anyRequest().authenticated()
       )
@@ -53,9 +42,7 @@ public class SecurityConfig {
     return new WebMvcConfigurer() {
       @Override
       public void addCorsMappings(@NonNull final CorsRegistry registry) {
-        registry.addMapping("/**")
-          .allowedMethods("POST", "GET", "PUT", "DELETE", "OPTIONS")
-          .allowedHeaders("*");
+        registry.addMapping("/**").allowedOrigins("*");
       }
     };
   }

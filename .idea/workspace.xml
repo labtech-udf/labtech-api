@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8a4a916-9c71-4ed2-ba97-a46b17c2ccaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V003__create_table_ods.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/realm-dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/realm.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/LabtechEventosApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/LabtechEventosApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/Evento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V002__create_tables.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V003__set_sequence.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V004__insert_ods.sql" beforeDir="false" />
-    </list>
+    <list default="true" id="d8a4a916-9c71-4ed2-ba97-a46b17c2ccaa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,48 +50,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Docker/compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.compose.yaml.app: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.compose.yaml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.labtech [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.labtech [mvn,clean,package...].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.LabtechApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tauis/Documentos/GitHub/Labtech/labtech-api/new-with-keycloak/src/main/java/com/labtech/events/constants&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Docker/compose.yaml: Compose Deployment.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.compose.yaml.app: Compose Deployment.executor": "Run",
+    "Docker.compose.yaml.db: Compose Deployment.executor": "Run",
+    "Docker.compose.yaml: Compose Deployment.executor": "Run",
+    "Maven.labtech [install].executor": "Run",
+    "Maven.labtech [mvn,clean,package...].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.LabtechApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/tauis/Documentos/GitHub/Labtech/labtech-api/new-with-keycloak/src/main/java/com/labtech/events/constants",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;PostgreSQL&quot;,
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL",
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak\src\main\java\com\labtech\events\constants" />
@@ -310,6 +291,7 @@
       <workItem from="1708119466668" duration="1449000" />
       <workItem from="1708183232323" duration="600000" />
       <workItem from="1708264984879" duration="23000" />
+      <workItem from="1708293107081" duration="26000" />
     </task>
     <servers />
   </component>
