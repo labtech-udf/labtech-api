@@ -1,18 +1,23 @@
 package com.labtech.events.evento;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.labtech.events.constants.Status;
 import com.labtech.events.files.ArquivoDTO;
 import com.labtech.events.utils.GenericResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.ObjectUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 @RestController
+@RequestMapping("api")
 @Tag(name = "Evento", description = "Gerenciamento de Eventos")
 public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
 
@@ -23,7 +28,7 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
     this.service = service;
   }
 
-  @GetMapping("/api/public/getAllEvents")
+  @GetMapping("/public/getAllEvents")
   public List<EventoDTO> listarEventos() {
     List<EventoDTO> list = service.findAll();
     if (list.isEmpty()) {
@@ -54,13 +59,64 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
     }
   }
 
-  @GetMapping("event/get")
-  public ResponseEntity<String> getText() throws JsonProcessingException {
-    String message = "Eventos teste lasndkjasn";
-    // Create a JSON object with the desired key-value pairs
-    Map<String, String> response = new HashMap<>();
-    response.put("message", message);
-    return ResponseEntity.ok(new ObjectMapper().writeValueAsString(response));
+  @GetMapping("/private/evento/{id}")
+  public ResponseEntity<EventoDTO> obterEventoPorId(@PathVariable Long id) {
+    EventoDTO evento = service.findById(id);
+    evento.setStatus(evento.getStatus() != null ? Status.valueOf(evento.getStatus()) : Status.C);
+    return ResponseEntity.ok(evento);
   }
+
+  @PostMapping(path = "/private/evento", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+  @PutMapping(path = "/private/evento", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+  public ResponseEntity<?> eventImage(
+    @RequestParam("evento") String evento,
+    @RequestParam("file") MultipartFile file
+  ) {
+    try {
+      if (ObjectUtils.isEmpty(evento) || file == null || file.isEmpty()) {
+        return ResponseEntity.badRequest().body("Dados de evento e arquivo são obrigatórios.");
+      }
+
+      EventoDTO obj = new ObjectMapper().readValue(evento, EventoDTO.class);
+      obj.setStatus(obj.getStatus() != null ? Status.valueOf(obj.getStatus()) : Status.C);
+//      obj.setCategorias(null);
+
+//      if (!file.isEmpty()) {
+//        obj.setPhoto(obj.getId() != null ?
+//          arquivoService.update(obj.getPhoto().getId(), file) :
+//          arquivoService.insert(file)
+//        );
+//      }
+
+      if (obj.getId() != null) {
+        return super.updateObject(obj);
+      } else {
+        super.createObject(obj);
+        return ResponseEntity.ok().build();
+      }
+    } catch (Exception e) {
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar a solicitação.");
+    }
+
+  }
+
+  @PutMapping("/private/noImg")
+  public ResponseEntity eventNoImage(@RequestParam EventoDTO evento) throws Exception {
+    if (evento.getId() != null) {
+      evento.setStatus(evento.getStatus() != null ? Status.valueOf(evento.getStatus()) : Status.C);
+      return ResponseEntity.ok(super.updateObject(evento));
+    } else {
+      evento.setStatus(evento.getStatus() != null ? Status.valueOf(evento.getStatus()) : Status.C);
+      super.createObject(evento);
+      return ResponseEntity.ok().build();
+    }
+  }
+
+  @DeleteMapping("/private/del/{id}")
+  public ResponseEntity delete(@PathVariable Long id) throws Exception {
+    super.delete(id);
+    return ResponseEntity.noContent().build();
+  }
+
 
 }
