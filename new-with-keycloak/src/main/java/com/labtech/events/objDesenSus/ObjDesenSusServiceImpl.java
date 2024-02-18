@@ -26,7 +26,15 @@ public class ObjDesenSusServiceImpl extends GenericServiceImpl<ObjDesenSus, ObjD
 
   @Override
   public List<ObjDesenSusDTO> findAll() {
-    List<ObjDesenSus> list = this.repository.findAllByExcluded(Boolean.FALSE);
+    List<ObjDesenSus> list = this.repository.findAllByExcludedOrderByIdAsc(Boolean.FALSE);
     return this.mapper.toDto(list);
   }
+
+  @Override
+  public List<ObjDesenSusDTO> findActive() {
+    List<ObjDesenSus> list = this.repository.findAllByStatusOrderByIdAsc(Boolean.TRUE);
+    return this.mapper.toDto(list);
+  }
+
+
 }

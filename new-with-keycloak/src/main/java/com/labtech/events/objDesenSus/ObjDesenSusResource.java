@@ -3,6 +3,8 @@ package com.labtech.events.objDesenSus;
 
 import com.labtech.events.utils.GenericResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -24,27 +26,39 @@ public class ObjDesenSusResource extends GenericResource<ObjDesenSusDTO, ObjDese
   @GetMapping("/listods")
   @PreAuthorize("hasRole('ADMIN')")
   public List<ObjDesenSusDTO> listODs() {
-    List<ObjDesenSusDTO> list = service.findAll();
-
-
     return service.findAll();
   }
 
-  @PostMapping("")
-  @PutMapping(path = "")
-  public ResponseEntity<ObjDesenSusDTO> createupdate(@RequestBody ObjDesenSusDTO dto) throws Exception {
-    if (dto.getId() != null) {
-      super.updateObject(dto);
-      return ResponseEntity.ok().build();
-    } else {
-      super.createObject(dto);
-      return ResponseEntity.ok().build();
-    }
+  @GetMapping("/listods/active")
+  @PreAuthorize("hasRole('ADMIN')")
+  public List<ObjDesenSusDTO> listActive() {
+    return service.findActive();
+  }
+
+  @PostMapping("/create/ods")
+  @PreAuthorize("hasRole('ADMIN')")
+  public ResponseEntity<ObjDesenSusDTO> create(@RequestBody ObjDesenSusDTO dto) throws Exception {
+    super.createObject(dto);
+    return ResponseEntity.ok().build();
+  }
+
+  @PutMapping("/update/ods")
+  @PreAuthorize("hasRole('ADMIN')")
+  public ResponseEntity<ObjDesenSusDTO> update(@RequestBody ObjDesenSusDTO dto) throws Exception {
+    super.updateObject(dto);
+    return ResponseEntity.ok().build();
   }
 
   @DeleteMapping("/{id}")
-  public ResponseEntity delete(@PathVariable Long id) throws Exception {
-    super.delete(id);
-    return ResponseEntity.noContent().build();
+  @PreAuthorize("hasRole('ADMIN')")
+  public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
+    try {
+      service.delete(id);
+      return ResponseEntity.noContent().build();
+    } catch (DataIntegrityViolationException e) {
+      String message = "Não é possivel excluir ods em uso ";
+      return ResponseEntity.status(HttpStatus.CONFLICT).body(message);
+    }
   }
+
 }

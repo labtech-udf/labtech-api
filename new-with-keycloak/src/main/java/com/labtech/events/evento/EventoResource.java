@@ -16,7 +16,6 @@ import java.util.*;
 @Tag(name = "Evento", description = "Gerenciamento de Eventos")
 public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
 
-
   private final EventoService service;
 
   public EventoResource(EventoService service) {

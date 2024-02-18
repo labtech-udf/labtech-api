@@ -24,10 +24,14 @@ services:
       DB_PASSWORD: labtech
       KEYCLOAK_ADMIN: user
       KEYCLOAK_ADMIN_PASSWORD: bitnami
+      KC_HHTP_PORT: 8090
+    volumes:
+      - ./realm.json:/opt/bitnami/keycloak/data/import
     networks:
       - internal-network
     ports:
       - 8090:8080
     depends_on:
       - postgres
+
 

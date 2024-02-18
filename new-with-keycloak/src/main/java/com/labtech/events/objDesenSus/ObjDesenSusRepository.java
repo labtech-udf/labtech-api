@@ -6,6 +6,9 @@ import java.util.List;
 
 public interface ObjDesenSusRepository extends JpaRepository<ObjDesenSus, Long> {
 
-  List<ObjDesenSus> findAllByExcluded(Boolean excluded);
+  List<ObjDesenSus> findAllByExcludedOrderByIdAsc(Boolean excluded);
+
+  List<ObjDesenSus> findAllByStatusOrderByIdAsc(Boolean status);
+
 
 }

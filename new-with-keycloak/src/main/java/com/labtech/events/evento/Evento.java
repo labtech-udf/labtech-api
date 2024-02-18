@@ -3,12 +3,16 @@ package com.labtech.events.evento;
 import com.labtech.events.constants.SchemaConstants;
 import com.labtech.events.constants.Status;
 import com.labtech.events.files.Arquivo;
+import com.labtech.events.objDesenSus.ObjDesenSus;
 import com.labtech.events.utils.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -45,12 +49,12 @@ public class Evento extends AbstractEntity {
 //  )
 //  private Set<EventoCategoria> categorias = new HashSet<>();
 
-//  @ManyToMany
-//  @JoinTable(
-//    name = "evento_ods",
-//    joinColumns = @JoinColumn(name = "evento_id"),
-//    inverseJoinColumns = @JoinColumn(name = "ods_id")
-//  )
-//  private Set<ObjDesenSus> ods = new HashSet<>();
+  @ManyToMany
+  @JoinTable(
+    name = "evento_ods_tb",
+    joinColumns = @JoinColumn(name = "evento_id"),
+    inverseJoinColumns = @JoinColumn(name = "ods_id")
+  )
+  private Set<ObjDesenSus> ods = new HashSet<>();
 
 }

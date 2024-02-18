@@ -9,6 +9,8 @@ public interface ObjDesenSusService extends GenericService<ObjDesenSusDTO> {
 
   List<ObjDesenSusDTO> findAll();
 
+  List<ObjDesenSusDTO> findActive();
+
   ObjDesenSusDTO findById(Long id);
 
 }

@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a4a916-9c71-4ed2-ba97-a46b17c2ccaa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V003__create_table_ods.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new-with-keycloak/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/TokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/TokenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/Arquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/Arquivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/JWTConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/JWTConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/realm-dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/realm.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/LabtechEventosApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/LabtechEventosApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V002__create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V002__create_tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/old/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/old/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V002__create_tables.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V003__set_sequence.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V004__insert_ods.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,6 +307,9 @@
       <workItem from="1707840249940" duration="135000" />
       <workItem from="1707840413375" duration="82000" />
       <workItem from="1707840514422" duration="479000" />
+      <workItem from="1708119466668" duration="1449000" />
+      <workItem from="1708183232323" duration="600000" />
+      <workItem from="1708264984879" duration="23000" />
     </task>
     <servers />
   </component>
