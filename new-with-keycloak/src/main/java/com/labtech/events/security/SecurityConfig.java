@@ -2,6 +2,10 @@ package com.labtech.events.security;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.keycloak.OAuth2Constants;
+import org.keycloak.admin.client.Keycloak;
+import org.keycloak.admin.client.KeycloakBuilder;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -17,6 +21,22 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableMethodSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+  //
+  @Value("${keycloak.username}")
+  private String user;
+
+  @Value("${keycloak.password}")
+  private String pass;
+//
+  @Value("${keycloak.auth-server-url}")
+  private String url;
+//
+//  @Value("${keycloak.clientId}")
+//  private String clId;
+//
+//  @Value("${keycloak.realm}")
+//  private String realm;
+
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
@@ -27,7 +47,8 @@ public class SecurityConfig {
           "/swagger-ui/**",
           "/swagger-resources/*",
           "/v3/api-docs/**",
-          "/api-docs/**"
+          "/api-docs/**",
+          "http://localhost:8090/**"
         ).permitAll()
         .anyRequest().authenticated()
       )
@@ -45,6 +66,19 @@ public class SecurityConfig {
         registry.addMapping("/**").allowedOrigins("*");
       }
     };
+  }
+
+  @Bean
+  public Keycloak keycloak() {
+    return KeycloakBuilder.builder()
+      .serverUrl(url)
+      .realm("master")
+      .clientId("admin-cli")
+      .grantType(OAuth2Constants.PASSWORD)
+      .clientSecret("5GoyYjv4l1emoUw0yDNxgiGvSAH3tVM4")
+      .username(user)
+      .password(pass)
+      .build();
   }
 
 }
