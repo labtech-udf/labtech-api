@@ -4,7 +4,108 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8a4a916-9c71-4ed2-ba97-a46b17c2ccaa" name="Changes" comment="" />
+    <list default="true" id="509e43b7-a68e-4aa3-b68d-8d77836af2c5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/realm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/LabtechEventosApiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/TokenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/TokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/constants/SchemaConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/constants/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/constants/UtilsConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/Evento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/Arquivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/ArquivoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/ArquivoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/CustomJwt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/JWTConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/AbstractEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/AbstractEntityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/EntityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/GenericResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/GenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/GenericServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V002__create_table_arquivo.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V003__create_table_ods.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V004__create_table_evento.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V005__create_table_evento_ods.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/test/java/com/labtech/events/LabtechEventosApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/LabtechApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/Arquivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/config/CorsConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/constants/SchemaConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/constants/UtilsConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/enums/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/Evento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/eventoCategoria/EventoCategoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/eventoCategoria/EventoCategoriaDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/AbstractEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/AbstractEntityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/EntityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/GenericResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/GenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/GenericServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/UrlConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/files/FileStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/files/LocalFileStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/src/main/resources/scripts/init.sql" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +114,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dockerfile" />
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -40,9 +140,9 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2VmQL30ai43vtOJ4FQq7UrDlPHa" />
+  <component name="ProjectId" id="2cDuRf25CsqhZAxYH91OSGV7D6C" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -52,116 +152,69 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Docker.Docker/compose.yaml: Compose Deployment.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.compose.yaml.app: Compose Deployment.executor": "Run",
-    "Docker.compose.yaml.db: Compose Deployment.executor": "Run",
+    "Docker.compose.yaml.keycloak: Compose Deployment.executor": "Run",
     "Docker.compose.yaml: Compose Deployment.executor": "Run",
-    "Maven.labtech [install].executor": "Run",
-    "Maven.labtech [mvn,clean,package...].executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "HTTP Request.generated-requests | #2.executor": "Run",
+    "HTTP Request.generated-requests | #3.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.LabtechApplication.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "Spring Boot.LabtechEventosApiApplication.executor": "Run",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/tauis/Documentos/GitHub/Labtech/labtech-api/new-with-keycloak/src/main/java/com/labtech/events/constants",
+    "last_opened_file_path": "C:/Users/tauis/Documentos/GitHub/BPS/bps-backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
-    ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL",
-      "MySQL"
-    ]
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak\src\main\java\com\labtech\events\constants" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.labtech.events.auth" />
+      <recent name="com.labtech.events.security" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\tauis\Documents\Github\Labtech\labtech-api" />
-      <recent name="C:\Users\tauis\Documents\Github\Labtech\labtech-api\config\Docker" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak\src\main\java\com\labtech\events" />
+      <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak\src\main\java\com\labtech\events\files" />
+      <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="br.com.labtech.eventoCategoria" />
-      <recent name="br.com.labtech.arquivo" />
+      <recent name="com.labtech.events.evento" />
+      <recent name="com.labtech.events.files" />
+      <recent name="com.labtech.events.utils" />
+      <recent name="com.labtech.events.utils.abstratcs" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.LabtechApplication">
-    <configuration name="labtech [mvn,clean,package...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="mvn" />
-                <option value="clean" />
-                <option value="package" />
-                <option value="dockerfile:build" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
+  <component name="RunManager" selected="Spring Boot.LabtechEventosApiApplication">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="LabtechApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="LabtechEventosApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="labtech" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.labtech.LabtechApplication" />
+      <module name="Events" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.labtech.events.LabtechEventosApiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Docker/compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="config/Docker/compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
@@ -169,27 +222,20 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="envFilePath" value="" />
           <option name="sourceFilePath" value="compose.yaml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="compose.yaml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="compose.yaml.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="app" />
+              <option value="keycloak" />
             </list>
           </option>
           <option name="sourceFilePath" value="compose.yaml" />
@@ -197,154 +243,79 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="compose.yaml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Docker.Docker/compose.yaml: Compose Deployment" />
-      <item itemvalue="Docker.Dockerfile" />
-      <item itemvalue="Docker.compose.yaml: Compose Deployment" />
-      <item itemvalue="Docker.compose.yaml.app: Compose Deployment" />
-      <item itemvalue="Docker.compose.yaml.db: Compose Deployment" />
-      <item itemvalue="Maven.labtech [mvn,clean,package...]" />
-      <item itemvalue="Spring Boot.LabtechApplication" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.compose.yaml.db: Compose Deployment" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="Docker.compose.yaml: Compose Deployment" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.Docker/compose.yaml: Compose Deployment" />
-        <item itemvalue="Docker.compose.yaml.app: Compose Deployment" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
+        <item itemvalue="Docker.compose.yaml.keycloak: Compose Deployment" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d8a4a916-9c71-4ed2-ba97-a46b17c2ccaa" name="Changes" comment="" />
-      <created>1695438718401</created>
+      <changelist id="509e43b7-a68e-4aa3-b68d-8d77836af2c5" name="Changes" comment="" />
+      <created>1707658463343</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695438718401</updated>
-      <workItem from="1695438719361" duration="995000" />
-      <workItem from="1695559586668" duration="32000" />
-      <workItem from="1696794913793" duration="5035000" />
-      <workItem from="1700949830960" duration="3830000" />
-      <workItem from="1701377201143" duration="8884000" />
-      <workItem from="1701437389493" duration="1003000" />
-      <workItem from="1701438709664" duration="56000" />
-      <workItem from="1701438907908" duration="73000" />
-      <workItem from="1701438993933" duration="37726000" />
-      <workItem from="1701520279247" duration="2672000" />
-      <workItem from="1701550294685" duration="2046000" />
-      <workItem from="1701609820191" duration="2113000" />
-      <workItem from="1701638002778" duration="2268000" />
-      <workItem from="1701736878990" duration="4157000" />
-      <workItem from="1701818884970" duration="1922000" />
-      <workItem from="1702004983245" duration="1020000" />
-      <workItem from="1702035844769" duration="14524000" />
-      <workItem from="1702117007708" duration="14063000" />
-      <workItem from="1702678387903" duration="6024000" />
-      <workItem from="1702850017690" duration="1733000" />
-      <workItem from="1704198248381" duration="10102000" />
-      <workItem from="1704547841571" duration="3551000" />
-      <workItem from="1704552419390" duration="181000" />
-      <workItem from="1704552611824" duration="5131000" />
-      <workItem from="1704578221918" duration="3001000" />
-      <workItem from="1704581238356" duration="10517000" />
-      <workItem from="1704751792927" duration="6877000" />
-      <workItem from="1704913869672" duration="2190000" />
-      <workItem from="1705326752708" duration="618000" />
-      <workItem from="1705442057296" duration="6410000" />
-      <workItem from="1705849750477" duration="6131000" />
-      <workItem from="1706192458302" duration="7000" />
-      <workItem from="1706619657565" duration="1940000" />
-      <workItem from="1706625415293" duration="1356000" />
-      <workItem from="1706821257402" duration="437000" />
-      <workItem from="1706972135014" duration="887000" />
-      <workItem from="1706981880533" duration="1374000" />
-      <workItem from="1706993891342" duration="1230000" />
-      <workItem from="1707259724334" duration="703000" />
-      <workItem from="1707261158537" duration="7000" />
-      <workItem from="1707261176318" duration="3693000" />
-      <workItem from="1707587159348" duration="173000" />
-      <workItem from="1707587338284" duration="53000" />
-      <workItem from="1707587400795" duration="69000" />
-      <workItem from="1707587741367" duration="2000" />
-      <workItem from="1707587918419" duration="5000" />
-      <workItem from="1707658251507" duration="216000" />
-      <workItem from="1707830848463" duration="184000" />
-      <workItem from="1707840249940" duration="135000" />
-      <workItem from="1707840413375" duration="82000" />
-      <workItem from="1707840514422" duration="479000" />
-      <workItem from="1708119466668" duration="1449000" />
-      <workItem from="1708183232323" duration="600000" />
-      <workItem from="1708264984879" duration="23000" />
-      <workItem from="1708293107081" duration="26000" />
+      <updated>1707658463343</updated>
+      <workItem from="1707658464368" duration="11619000" />
+      <workItem from="1707738887937" duration="3238000" />
+      <workItem from="1707743529881" duration="2016000" />
+      <workItem from="1707746556639" duration="21187000" />
+      <workItem from="1707830830593" duration="1000" />
+      <workItem from="1707831049420" duration="7761000" />
+      <workItem from="1707840211928" duration="173000" />
+      <workItem from="1707840397255" duration="97000" />
+      <workItem from="1707840506517" duration="2947000" />
+      <workItem from="1707843468677" duration="2151000" />
+      <workItem from="1707853158387" duration="12433000" />
+      <workItem from="1707911165799" duration="44000" />
+      <workItem from="1708120849754" duration="606000" />
+      <workItem from="1708124000202" duration="2081000" />
+      <workItem from="1708176032499" duration="7179000" />
+      <workItem from="1708183229618" duration="7466000" />
+      <workItem from="1708207632420" duration="1170000" />
+      <workItem from="1708264982491" duration="17000" />
+      <workItem from="1708293144930" duration="16582000" />
+      <workItem from="1708397149480" duration="303000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="dependencySupport" implementationName="executable:docker" />
-    <option featureType="dependencySupport" implementationName="executable:kubectl" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/labtech/evento/EventoResource.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="98" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/security/JWTConverter.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusResource.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="99" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusResource.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="100" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusResource.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusResource.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusResource.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="103" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
