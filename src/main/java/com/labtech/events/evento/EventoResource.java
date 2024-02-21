@@ -12,6 +12,7 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -33,13 +34,17 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
     List<EventoDTO> list = service.findAll();
     if (list.isEmpty()) {
       List<EventoDTO> lNew = new ArrayList<>();
-      for (long i = 0; i <= 5; i++) {
+      Random random = new Random();
+      for (long i = 0; i <= 150; i++) {
         EventoDTO events = new EventoDTO();
+        int red = random.nextInt(256); // Valores de 0 a 255
+        int green = random.nextInt(256);
+        int blue = random.nextInt(256);
         events.setId(i);
         events.setName("Name teste: " + i);
         events.setDescription("Description test: " + i);
         events.setNameCard("Name Card: " + i);
-        events.setCor("#3f83f0");
+        events.setCor(String.format("#%02x%02x%02x", red, green, blue));
         Status[] statuses = Status.values();
         int randomIndex = new Random().nextInt(statuses.length);
         events.setStatus(statuses[randomIndex]);
@@ -47,10 +52,9 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
           ArquivoDTO arquivo = new ArquivoDTO();
           arquivo.setId(i);
           arquivo.setName("Name file" + i);
-          arquivo.setUrl("https://api.bps.fabricawebsis.com.br/bps-gallery/api/v2/arquivo/418af432-0390-4442-9a9e-6b45eb1a78ef/download");
+          arquivo.setUrl("https://source.unsplash.com/random");
           events.setPhoto(arquivo);
         }
-
         lNew.add(events);
       }
       return lNew;

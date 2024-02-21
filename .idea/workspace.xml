@@ -5,106 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="509e43b7-a68e-4aa3-b68d-8d77836af2c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/realm.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/LabtechEventosApiApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/TokenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/TokenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/auth/pessoa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/constants/SchemaConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/constants/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/constants/UtilsConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/Evento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/evento/EventoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/Arquivo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/ArquivoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/files/ArquivoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/CustomJwt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/JWTConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/AbstractEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/AbstractEntityDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/EntityMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/GenericResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/GenericService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/java/com/labtech/events/utils/GenericServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V002__create_table_arquivo.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V003__create_table_ods.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V004__create_table_evento.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/main/resources/db/migration/V005__create_table_evento_ods.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-with-keycloak/src/test/java/com/labtech/events/LabtechEventosApiApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/LabtechApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/Arquivo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/arquivo/ArquivoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/config/CorsConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/config/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/constants/SchemaConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/constants/UtilsConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/enums/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/Evento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/evento/EventoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/eventoCategoria/EventoCategoria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/eventoCategoria/EventoCategoriaDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/objDesenSus/ObjDesenSusServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/AbstractEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/AbstractEntityDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/EntityMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/GenericResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/GenericService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/GenericServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/UrlConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/files/FileStorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/java/br/com/labtech/utils/files/LocalFileStorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/src/main/resources/scripts/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/evento/EventoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/evento/EventoResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +46,7 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2cDuRf25CsqhZAxYH91OSGV7D6C" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -163,9 +66,9 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.LabtechEventosApiApplication.executor": "Run",
+    "Spring Boot.LabtechEventosApiApplication.executor": "Debug",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/tauis/Documentos/GitHub/BPS/bps-backend",
@@ -177,7 +80,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -288,11 +191,17 @@
       <workItem from="1708264982491" duration="17000" />
       <workItem from="1708293144930" duration="16582000" />
       <workItem from="1708397149480" duration="303000" />
+      <workItem from="1708467717354" duration="3804000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -314,7 +223,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenService.java</url>
-          <line>26</line>
+          <line>24</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
