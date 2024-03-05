@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS eventos.evento_tb
     photo_id     BIGINT CONSTRAINT fk157hrp81o2g049knufbyat8kw REFERENCES eventos.arquivo_tb
 );
 
-ALTER TABLE eventos.evento_tb OWNER TO labtech;
+ALTER TABLE eventos.evento_tb OWNER TO events;
 
 -- Cria a sequencia para eventos.evento_tb
 CREATE SEQUENCE IF NOT EXISTS eventos.evento_tb_id_seq

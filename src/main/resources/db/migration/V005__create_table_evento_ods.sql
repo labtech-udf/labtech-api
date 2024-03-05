@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS eventos.evento_ods_tb
     PRIMARY KEY (evento_id, ods_id)
 );
 
-ALTER TABLE eventos.evento_ods_tb OWNER TO labtech;
+ALTER TABLE eventos.evento_ods_tb OWNER TO events;

@@ -1,5 +1,5 @@
 -- Cria o schema "eventos" se ele não existir.
-CREATE SCHEMA IF NOT EXISTS eventos AUTHORIZATION labtech;
+CREATE SCHEMA IF NOT EXISTS eventos AUTHORIZATION events;
 
 -- Cria a tabela "eventos.Arquivo_tb".
 CREATE TABLE IF NOT EXISTS eventos.arquivo_tb
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS eventos.arquivo_tb
 );
 
 ALTER TABLE eventos.arquivo_tb
-    OWNER TO labtech;
+    OWNER TO events;
 
 -- Cria a sequencia para eventos.arquivo_tb
 CREATE SEQUENCE IF NOT EXISTS eventos.arquivo_tb_id_seq
