@@ -33,5 +33,20 @@ services:
       - 8090:8080
     depends_on:
       - postgres
-
-
+    
+  labtech-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8180:8180"
+    environment:
+      POSTGRES_URL: jdbc:postgresql://postgres:4002/labtech_db
+      POSTGRES_USER: labtech
+      POSTGRES_PASSWORD: labtech
+    volumes:
+      - ./labtech-api:/opt/your-app
+    networks:
+      - internal-network
+    depends_on:
+      - postgres
