@@ -2,18 +2,24 @@ https://github.com/bitnami/containers/tree/main/bitnami/keycloak#how-to-use-this
 
 ### Start aplicação local
 ```bash
-# Clone este repositório
-
+# Start
 $ docker-compose -f up
+
+# Down
+$ docker-compose -f down
 
 # O servidor iniciará na porta:8081 - acesse <http://localhost:8081/swagger-ui/index.html>
 ```
 
 ### Compose up:prod 
 ```bash
-# Clone este repositório
+# Start
 
 $ docker-compose -f .\compose-prod.yaml up
+
+# Down
+$ docker-compose -f ./compose-prod.yaml down
+
 
 # O servidor iniciará na porta:8081 - acesse <http://localhost:8081/swagger-ui/index.html>
 ```
