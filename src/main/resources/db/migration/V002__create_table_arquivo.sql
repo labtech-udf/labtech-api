@@ -2,7 +2,7 @@
 CREATE SCHEMA IF NOT EXISTS eventos AUTHORIZATION labtech;
 
 -- Cria a tabela "eventos.Arquivo_tb".
-CREATE TABLE eventos.arquivo_tb
+CREATE TABLE IF NOT EXISTS eventos.arquivo_tb
 (
     id           BIGINT       NOT NULL PRIMARY KEY,
     created_date TIMESTAMP(6) NOT NULL,
@@ -21,7 +21,7 @@ ALTER TABLE eventos.arquivo_tb
     OWNER TO labtech;
 
 -- Cria a sequencia para eventos.arquivo_tb
-CREATE SEQUENCE eventos.arquivo_tb_id_seq
+CREATE SEQUENCE IF NOT EXISTS eventos.arquivo_tb_id_seq
     OWNED BY eventos.arquivo_tb.id
     START WITH 1
     INCREMENT BY 1
