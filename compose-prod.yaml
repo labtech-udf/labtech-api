@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   events_db:
     container_name: events_db
@@ -9,7 +8,7 @@ services:
       POSTGRES_USER: events
       POSTGRES_PASSWORD: events
     ports:
-      - '4002:5432'
+      - '5432:5432'
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -31,5 +30,20 @@ services:
       - 8090:8080
     depends_on:
       - events_db
+
+  events-api:
+    container_name: events_api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - events_db
+      - keycloak
+    ports:
+      - "8081:8081"
+    environment:
+      POSTGRES_URL: jdbc:postgresql://events_db:5432/events_db
+      POSTGRES_USER: events
+      POSTGRES_PASSWORD: events
 volumes:
   pgdata: { }
