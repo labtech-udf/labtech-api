@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/private")
+@RequestMapping("/api")
 @Tag(name = "ODS", description = "Objetivos de Desenvolvimento Sustentável")
 public class ObjDesenSusResource extends GenericResource<ObjDesenSusDTO, ObjDesenSusResource> {
 
@@ -23,33 +23,39 @@ public class ObjDesenSusResource extends GenericResource<ObjDesenSusDTO, ObjDese
     this.service = service;
   }
 
-  @GetMapping("/listods")
+  @GetMapping("/private/listods")
   @PreAuthorize("hasRole('ADMIN')")
   public List<ObjDesenSusDTO> listODs() {
     return service.findAll();
   }
 
-  @GetMapping("/listods/active")
+  @GetMapping("/public/listods")
+  @PreAuthorize("hasRole('ADMIN')")
+  public List<ObjDesenSusDTO> listODsPublic() {
+    return service.findAll();
+  }
+
+  @GetMapping("/private/listods/active")
   @PreAuthorize("hasRole('ADMIN')")
   public List<ObjDesenSusDTO> listActive() {
     return service.findActive();
   }
 
-  @PostMapping("/create/ods")
+  @PostMapping("/private/create/ods")
   @PreAuthorize("hasRole('ADMIN')")
   public ResponseEntity<ObjDesenSusDTO> create(@RequestBody ObjDesenSusDTO dto) throws Exception {
     super.createObject(dto);
     return ResponseEntity.ok().build();
   }
 
-  @PutMapping("/update/ods")
+  @PutMapping("/private/update/ods")
   @PreAuthorize("hasRole('ADMIN')")
   public ResponseEntity<ObjDesenSusDTO> update(@RequestBody ObjDesenSusDTO dto) throws Exception {
     super.updateObject(dto);
     return ResponseEntity.ok().build();
   }
 
-  @DeleteMapping("/{id}")
+  @DeleteMapping("/private/{id}")
   @PreAuthorize("hasRole('ADMIN')")
   public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
     try {
