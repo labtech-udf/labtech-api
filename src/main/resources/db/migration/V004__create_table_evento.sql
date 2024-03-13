@@ -1,5 +1,5 @@
 -- Cria a tabela "eventos.evento_tb".
-CREATE TABLE eventos.evento_tb
+CREATE TABLE IF NOT EXISTS eventos.evento_tb
 (
     id           BIGINT       NOT NULL PRIMARY KEY,
     created_date TIMESTAMP(6) NOT NULL,
@@ -17,10 +17,10 @@ CREATE TABLE eventos.evento_tb
     photo_id     BIGINT CONSTRAINT fk157hrp81o2g049knufbyat8kw REFERENCES eventos.arquivo_tb
 );
 
-ALTER TABLE eventos.evento_tb OWNER TO labtech;
+ALTER TABLE eventos.evento_tb OWNER TO events;
 
 -- Cria a sequencia para eventos.evento_tb
-CREATE SEQUENCE eventos.evento_tb_id_seq
+CREATE SEQUENCE IF NOT EXISTS eventos.evento_tb_id_seq
     OWNED BY eventos.evento_tb.id
     START WITH 1
     INCREMENT BY 1

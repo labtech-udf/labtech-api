@@ -88,6 +88,8 @@
       <recent name="com.labtech.events.security" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api" />
+      <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\src\main\resources\db\migration" />
       <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak\src\main\java\com\labtech\events" />
       <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak\src\main\java\com\labtech\events\files" />
       <recent name="C:\Users\tauis\Documentos\GitHub\Labtech\labtech-api\new-with-keycloak" />
@@ -100,15 +102,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.LabtechEventosApiApplication">
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="LabtechEventosApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Events" />
@@ -123,9 +116,54 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="compose.yaml.events-api: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="events-api" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="compose.yaml.events: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="events" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="compose.yaml.events_db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="events_db" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="compose.yaml" />
         </settings>
       </deployment>
@@ -146,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="Docker.compose.yaml.events-api: Compose Deployment" />
+        <item itemvalue="Docker.compose.yaml.events_db: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml: Compose Deployment" />
-        <item itemvalue="HTTP Request.generated-requests | #1" />
-        <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="Docker.compose.yaml.keycloak: Compose Deployment" />
+        <item itemvalue="Docker.compose.yaml.events: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
