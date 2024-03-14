@@ -3,10 +3,13 @@ package com.labtech.events.evento;
 
 import com.labtech.events.constants.Status;
 import com.labtech.events.files.ArquivoDTO;
+import com.labtech.events.objDesenSus.ObjDesenSusDTO;
 import com.labtech.events.utils.AbstractEntityDTO;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.*;
+
+import java.util.Set;
 
 @Data
 @ToString
@@ -32,9 +35,8 @@ public class EventoDTO extends AbstractEntityDTO {
   @Enumerated(EnumType.STRING)
   private Status status;
 
-//  private Set<EventoCategoriaDTO> categorias;
-//
-//  private Set<ObjDesenSusDTO> ods;
+  //  private Set<EventoCategoriaDTO> categorias;
+  private Set<ObjDesenSusDTO> ods;
 
 
   public String getStatus() {

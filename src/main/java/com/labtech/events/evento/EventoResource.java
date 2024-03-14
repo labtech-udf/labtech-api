@@ -33,7 +33,7 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
     List<EventoDTO> list = service.findAll();
     if (list.isEmpty()) {
       List<EventoDTO> lNew = new ArrayList<>();
-      for (long i = 0; i <= 5; i++) {
+      for (long i = 0; i <= 15; i++) {
         EventoDTO events = new EventoDTO();
         events.setId(i);
         events.setName("Name teste: " + i);
@@ -47,7 +47,7 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
           ArquivoDTO arquivo = new ArquivoDTO();
           arquivo.setId(i);
           arquivo.setName("Name file" + i);
-          arquivo.setUrl("https://api.bps.fabricawebsis.com.br/bps-gallery/api/v2/arquivo/418af432-0390-4442-9a9e-6b45eb1a78ef/download");
+          arquivo.setUrl("https://source.unsplash.com/random");
           events.setPhoto(arquivo);
         }
 
@@ -59,7 +59,7 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
     }
   }
 
-  @GetMapping("/private/evento/{id}")
+  @GetMapping("/public/evento/{id}")
   public ResponseEntity<EventoDTO> obterEventoPorId(@PathVariable Long id) {
     EventoDTO evento = service.findById(id);
     evento.setStatus(evento.getStatus() != null ? Status.valueOf(evento.getStatus()) : Status.C);

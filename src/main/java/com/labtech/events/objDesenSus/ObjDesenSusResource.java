@@ -29,14 +29,7 @@ public class ObjDesenSusResource extends GenericResource<ObjDesenSusDTO, ObjDese
     return service.findAll();
   }
 
-  @GetMapping("/public/listods")
-  @PreAuthorize("hasRole('ADMIN')")
-  public List<ObjDesenSusDTO> listODsPublic() {
-    return service.findAll();
-  }
-
-  @GetMapping("/private/listods/active")
-  @PreAuthorize("hasRole('ADMIN')")
+  @GetMapping("/public/listods/active")
   public List<ObjDesenSusDTO> listActive() {
     return service.findActive();
   }
