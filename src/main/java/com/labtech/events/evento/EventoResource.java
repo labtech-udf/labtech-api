@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.labtech.events.constants.Status;
 import com.labtech.events.files.ArquivoDTO;
 import com.labtech.events.utils.GenericResource;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +18,7 @@ import java.util.List;
 import java.util.Random;
 
 @RestController
+@ApiResponse
 @RequestMapping("api")
 @Tag(name = "Evento", description = "Gerenciamento de Eventos")
 public class EventoResource extends GenericResource<EventoDTO, EventoResource> {

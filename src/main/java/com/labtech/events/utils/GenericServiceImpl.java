@@ -1,5 +1,7 @@
 package com.labtech.events.utils;
 
+//import com.labtech.events.evento.EventoDTO;
+//import com.labtech.events.curso.CursoDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;
@@ -102,5 +104,8 @@ public abstract class GenericServiceImpl<E extends AbstractEntity, D extends Abs
     }
     return Boolean.FALSE;
   }
+
+  //public abstract EventoDTO findById(Long id);
+
 }
 

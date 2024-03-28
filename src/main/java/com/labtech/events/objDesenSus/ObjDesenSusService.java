@@ -1,6 +1,7 @@
 package com.labtech.events.objDesenSus;
 
 
+//import com.labtech.events.evento.EventoDTO;
 import com.labtech.events.utils.GenericService;
 
 import java.util.List;
