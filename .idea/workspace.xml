@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="509e43b7-a68e-4aa3-b68d-8d77836af2c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/evento/EventoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/evento/EventoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/evento/EventoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/evento/EventoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/objDesenSus/ObjDesenSusServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/utils/GenericServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/utils/GenericServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/curso/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/curso/Curso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/curso/CursoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/curso/CursoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/curso/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/curso/CursoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +257,10 @@
       <workItem from="1711117800812" duration="12955000" />
       <workItem from="1711199257760" duration="2454000" />
       <workItem from="1711584585110" duration="906000" />
-      <workItem from="1711628715831" duration="6952000" />
+      <workItem from="1711628715831" duration="7807000" />
+      <workItem from="1711662099550" duration="3204000" />
+      <workItem from="1711721305936" duration="1654000" />
+      <workItem from="1711725736403" duration="5183000" />
     </task>
     <servers />
   </component>

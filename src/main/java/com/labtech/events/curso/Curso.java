@@ -21,28 +21,12 @@ import java.util.Set;
 @Table(name="Curso_tb", schema = SchemaConstants.EVENTOS)
 public class Curso extends AbstractEntity {
 
-    private String name;
+    private String nome;
 
     private String sigla;
 
-    @Column(columnDefinition = "TEXT")
-    private String description;
+    private String descricao;
 
-    private String dateHora;
 
-    private String address;
-
-    private String cor;
-
-    @Enumerated(EnumType.STRING)
-    private Status status;
-
-    @ManyToMany
-    @JoinTable(
-            name = "curso_ods_tb",
-            joinColumns = @JoinColumn(name = "curso_id"),
-            inverseJoinColumns = @JoinColumn(name = "aluno_id")
-    )
-    private Set<ObjDesenSus> ods = new  HashSet<>();
 
 }

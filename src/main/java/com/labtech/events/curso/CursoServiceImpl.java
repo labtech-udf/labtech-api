@@ -5,6 +5,7 @@ import com.labtech.events.constants.Status;
 import com.labtech.events.utils.GenericServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.naming.Name;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +25,7 @@ public class CursoServiceImpl extends GenericServiceImpl<Curso, CursoDTO> implem
     @Override
     public List<CursoDTO> findAll(){
         List<Curso> listCurso = this.repository.findAllByExcluded(Boolean.FALSE);
-        listCurso.forEach(e -> e.setStatus(e.getStatus() == null ? Status.C : e.getStatus()));
+        listCurso.forEach(e -> e.setNome(e.getNome() == null ? "Null" : e.getNome()));
         return this.mapper.toDto(listCurso);
     }
 
