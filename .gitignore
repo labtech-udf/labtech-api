@@ -33,3 +33,4 @@ build/
 .vscode/
 /keycloak-data/
 /postgres-data/
+src/main/resources/service-account.json
