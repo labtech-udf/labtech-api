@@ -1,7 +1,7 @@
 package com.labtech.events.evento;
 
 
-import com.labtech.events.constants.Status;
+import com.labtech.events.constants.Enums.Status;
 import com.labtech.events.utils.GenericServiceImpl;
 import org.springframework.stereotype.Service;
 

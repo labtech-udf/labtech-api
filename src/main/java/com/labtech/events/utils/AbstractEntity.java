@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 @ToString
 @MappedSuperclass
 public class AbstractEntity implements Serializable {
+
   @Id
   @GeneratedValue(generator = "long")
   private Long id;

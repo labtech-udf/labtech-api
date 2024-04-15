@@ -1,7 +1,7 @@
 package com.labtech.events.evento;
 
 import com.labtech.events.constants.SchemaConstants;
-import com.labtech.events.constants.Status;
+import com.labtech.events.constants.Enums.Status;
 import com.labtech.events.files.Arquivo;
 import com.labtech.events.objDesenSus.ObjDesenSus;
 import com.labtech.events.utils.AbstractEntity;

@@ -1,4 +1,4 @@
-package com.labtech.events.constants;
+package com.labtech.events.constants.Enums;
 
 public enum Permission {
   ADMIN,

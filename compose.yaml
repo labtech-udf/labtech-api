@@ -12,24 +12,5 @@ services:
       - '4002:5432'
     volumes:
       - pgdata:/var/lib/postgresql/data
-
-  keycloak:
-    container_name: events_keycloak
-    image: bitnami/keycloak:23.0.6
-    environment:
-      DB_VENDOR: POSTGRES
-      DB_ADDR: events_db
-      DB_DATABASE: events_db
-      DB_USER: events
-      DB_PASSWORD: events
-      KEYCLOAK_ADMIN: user
-      KEYCLOAK_ADMIN_PASSWORD: bitnami
-      KC_HHTP_PORT: 8090
-    volumes:
-      - ./realm.json:/opt/bitnami/keycloak/data/import
-    ports:
-      - 8090:8080
-    depends_on:
-      - events_db
 volumes:
   pgdata: { }

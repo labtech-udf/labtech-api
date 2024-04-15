@@ -1,6 +1,9 @@
 -- Cria o schema "eventos" se ele não existir.
 CREATE SCHEMA IF NOT EXISTS eventos AUTHORIZATION events;
 
+-- Cria a sequência "long" no schema "eventos"
+CREATE SEQUENCE eventos.long;
+
 -- Cria a tabela "eventos.Arquivo_tb".
 CREATE TABLE IF NOT EXISTS eventos.arquivo_tb
 (

@@ -1,7 +1,7 @@
 package com.labtech.events.evento;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.labtech.events.constants.Status;
+import com.labtech.events.constants.Enums.Status;
 import com.labtech.events.files.ArquivoDTO;
 import com.labtech.events.utils.GenericResource;
 import io.swagger.v3.oas.annotations.tags.Tag;

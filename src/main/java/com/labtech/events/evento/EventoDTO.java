@@ -1,7 +1,7 @@
 package com.labtech.events.evento;
 
 
-import com.labtech.events.constants.Status;
+import com.labtech.events.constants.Enums.Status;
 import com.labtech.events.files.ArquivoDTO;
 import com.labtech.events.objDesenSus.ObjDesenSusDTO;
 import com.labtech.events.utils.AbstractEntityDTO;
@@ -36,6 +36,7 @@ public class EventoDTO extends AbstractEntityDTO {
   private Status status;
 
   //  private Set<EventoCategoriaDTO> categorias;
+
   private Set<ObjDesenSusDTO> ods;
 
 

@@ -13,4 +13,6 @@ public interface ObjDesenSusService extends GenericService<ObjDesenSusDTO> {
 
   ObjDesenSusDTO findById(Long id);
 
+
+
 }

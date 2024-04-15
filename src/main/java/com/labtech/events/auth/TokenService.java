@@ -1,40 +1,56 @@
 package com.labtech.events.auth;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTCreationException;
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.labtech.events.auth.users.Users;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 @Service
 public class TokenService {
 
-//  @Value("${keycloak.realm}")
-//  private String realm;
-//
-//  @Autowired
-//  private Keycloak keycloak;
-//
-//  public List<RoleRepresentation> getRoles() {
-//    return keycloak.realm(realm).roles().list();
-//  }
-//
-//  public List<UserRepresentation> getUsers() {
-//    return keycloak.realm(realm).users().list();
-//  }
-//
-//  public Response createUser(pessoa p) {
-//    UserRepresentation user = new UserRepresentation();
-//    user.setFirstName(p.firstName());
-//    user.setLastName(p.lastName());
-//    user.setEmail(p.email());
-//    user.setEmailVerified(true);
-//    List<RoleRepresentation> roles = getRoles();
-//    if (!roles.isEmpty()) {
-//      user.setRealmRoles(List.of(roles.getFirst().getName()));
-//    }
-//    try {
-//      return keycloak.realm(realm).users().create(user);
-//    } catch (Exception e) {
-//      // Implemente o tratamento de erros aqui
-//      throw new RuntimeException("Falha ao criar usuário: " + e.getMessage());
-//    }
-//  }
+  @Value("api.security.token.secret")
+  private String secret;
 
+  @Value("api.security.issuer")
+  private String issuer;
+
+  public String generateToken(Users user) {
+    try {
+      Algorithm algorithm = Algorithm.HMAC256(secret);
+
+      return JWT.create()
+        .withIssuer(issuer)
+        .withSubject(user.getEmail())
+        .withExpiresAt(generateExpirationDate())
+        .sign(algorithm);
+
+    } catch (JWTCreationException e) {
+      throw new RuntimeException("Erro durante a geração de token");
+    }
+  }
+
+  public String validateToken(String token) {
+    try {
+      Algorithm algorithm = Algorithm.HMAC256(secret);
+
+      return JWT.require(algorithm)
+        .withIssuer(issuer)
+        .build().verify(token)
+        .getSubject();
+
+    } catch (JWTVerificationException e) {
+      return null;
+    }
+  }
+
+  private Instant generateExpirationDate() {
+    return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
+  }
 }
