@@ -6,6 +6,7 @@ import com.labtech.events.auth.users.records.RegisterDTO;
 import com.labtech.events.auth.users.records.ResponseDTO;
 import com.labtech.events.utils.GenericResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -36,8 +37,7 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
     this.passwordEncoder = passwordEncoder;
   }
 
-  @GetMapping("/private/listUsers")
-  @PreAuthorize("hasRole('ROLE_ADMIN')")
+  @GetMapping("/public/listUsers")
   public List<UsersDTO> listUsers() {
     return service.findAll();
   }
@@ -58,16 +58,22 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
 
   @PostMapping("/public/login")
   public ResponseEntity login(@RequestBody LoginDTO body) {
-    Users user = this.repository.findByEmail(body.email()).orElseThrow(() -> new RuntimeException("User not found"));
-    if (passwordEncoder.matches(body.password(), user.getPassword())) {
-      String token = this.tokenService.generateToken(user);
-      return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
+    Optional<Users> optionalUser = this.repository.findByEmail(body.email());
+    if (optionalUser.isEmpty()) {
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuário não encontrado");
     }
-    return ResponseEntity.badRequest().build();
+
+    Users user = optionalUser.get();
+    if (!passwordEncoder.matches(body.password(), user.getPassword())) {
+      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Senha incorreta");
+    }
+
+    String token = this.tokenService.generateToken(user);
+    return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
   }
 
   @PostMapping("/public/register")
-  public ResponseEntity register(@RequestBody RegisterDTO body) {
+  public ResponseEntity register(@RequestBody RegisterDTO body) throws Exception {
     Optional<Users> usr = this.repository.findByEmail(body.email());
     if (usr.isEmpty()) {
       Users user = this.service.register(body);

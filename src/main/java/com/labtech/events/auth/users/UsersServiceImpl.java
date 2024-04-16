@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implements UsersService {
@@ -39,12 +40,14 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
   }
 
   @Override
-  public Users register(RegisterDTO obj) {
+  public Users register(RegisterDTO obj) throws Exception {
     Users user = new Users();
     user.setEmail(obj.email());
     user.setName(obj.name());
+    user.setUid(UUID.randomUUID());
     user.setRoles(Collections.singleton(Permission.USER));
     user.setPassword(passwordEncoder.encode(obj.password()));
-    return repository.saveAndFlush(user);
+    save(mapper.toDto(user));
+    return user;
   }
 }

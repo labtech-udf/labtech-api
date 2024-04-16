@@ -3,7 +3,6 @@ package com.labtech.events.infra;
 import com.labtech.events.auth.TokenService;
 import com.labtech.events.auth.users.Users;
 import com.labtech.events.auth.users.UsersRepository;
-import com.labtech.events.auth.users.UsersService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,10 +21,10 @@ import java.util.Collections;
 public class SecurityFilter extends OncePerRequestFilter {
 
   @Autowired
-  TokenService tokenService;
+  private TokenService tokenService;
 
   @Autowired
-  UsersService usersService;
+  private UsersRepository usersRepository;
 
   @Override
   protected void doFilterInternal(
@@ -37,7 +36,7 @@ public class SecurityFilter extends OncePerRequestFilter {
     var login = tokenService.validateToken(token);
 
     if (login != null) {
-      Users user = usersService.findByEmail(login).orElseThrow(() -> new RuntimeException("User Not Found"));
+      Users user = usersRepository.findByEmail(login).orElseThrow(() -> new RuntimeException("User Not Found"));
       var authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
       var authentication = new UsernamePasswordAuthenticationToken(user, null, authorities);
       SecurityContextHolder.getContext().setAuthentication(authentication);

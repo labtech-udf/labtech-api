@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="509e43b7-a68e-4aa3-b68d-8d77836af2c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/infra/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/infra/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/labtech/events/utils/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/labtech/events/utils/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V006__create_table_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V006__create_table_users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/service-account.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/service-account.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Record" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -250,7 +252,18 @@
       <workItem from="1709644546763" duration="12067000" />
       <workItem from="1709657948075" duration="12952000" />
       <workItem from="1709671098365" duration="917000" />
-      <workItem from="1712701299473" duration="312000" />
+      <workItem from="1712701299473" duration="5244000" />
+      <workItem from="1712758844757" duration="65000" />
+      <workItem from="1712942413163" duration="2711000" />
+      <workItem from="1712964508208" duration="2903000" />
+      <workItem from="1713036662762" duration="2756000" />
+      <workItem from="1713052656885" duration="1305000" />
+      <workItem from="1713059815587" duration="3971000" />
+      <workItem from="1713107929335" duration="8332000" />
+      <workItem from="1713141778542" duration="5298000" />
+      <workItem from="1713147096300" duration="376000" />
+      <workItem from="1713147719820" duration="421000" />
+      <workItem from="1713235341494" duration="2654000" />
     </task>
     <servers />
   </component>
@@ -260,25 +273,30 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/security/JWTConverter.java</url>
-          <line>24</line>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersResource.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersResource.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersResource.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersResource.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/users/UsersResource.java</url>
+          <line>83</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/labtech/events/auth/TokenService.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
