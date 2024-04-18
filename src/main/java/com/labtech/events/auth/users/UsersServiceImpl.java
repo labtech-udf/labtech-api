@@ -1,7 +1,7 @@
 package com.labtech.events.auth.users;
 
 import com.labtech.events.auth.users.records.RegisterDTO;
-import com.labtech.events.constants.Enums.Permission;
+import com.labtech.events.constants.Enums.Roles_user;
 import com.labtech.events.utils.GenericServiceImpl;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -45,7 +45,7 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
     user.setEmail(obj.email());
     user.setName(obj.name());
     user.setUid(UUID.randomUUID());
-    user.setRoles(Collections.singleton(Permission.USER));
+    user.setRoles(Collections.singleton(Roles_user.USER));
     user.setPassword(passwordEncoder.encode(obj.password()));
     save(mapper.toDto(user));
     return user;

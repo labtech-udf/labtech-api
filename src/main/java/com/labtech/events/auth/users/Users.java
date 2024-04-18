@@ -1,6 +1,6 @@
 package com.labtech.events.auth.users;
 
-import com.labtech.events.constants.Enums.Permission;
+import com.labtech.events.constants.Enums.Roles_user;
 import com.labtech.events.constants.SchemaConstants;
 import com.labtech.events.files.Arquivo;
 import com.labtech.events.utils.AbstractEntity;
@@ -39,6 +39,6 @@ public class Users extends AbstractEntity {
   @ElementCollection(fetch = FetchType.EAGER)
   @Enumerated(EnumType.STRING)
   @CollectionTable(name = "user_permissions", joinColumns = @JoinColumn(name = "user_id"))
-  private Set<Permission> roles = new HashSet<>();
+  private Set<Roles_user> roles = new HashSet<>();
 
 }

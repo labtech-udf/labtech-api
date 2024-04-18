@@ -1,6 +1,6 @@
 package com.labtech.events.auth.users;
 
-import com.labtech.events.constants.Enums.Permission;
+import com.labtech.events.constants.Enums.Roles_user;
 import com.labtech.events.files.Arquivo;
 import com.labtech.events.utils.AbstractEntityDTO;
 import lombok.*;
@@ -27,5 +27,5 @@ public class UsersDTO extends AbstractEntityDTO {
 
   private Arquivo foto_capa;
 
-  private List<Permission> roles;
+  private List<Roles_user> roles;
 }

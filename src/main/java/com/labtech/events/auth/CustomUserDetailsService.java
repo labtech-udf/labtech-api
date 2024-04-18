@@ -2,7 +2,7 @@ package com.labtech.events.auth;
 
 import com.labtech.events.auth.users.Users;
 import com.labtech.events.auth.users.UsersRepository;
-import com.labtech.events.constants.Enums.Permission;
+import com.labtech.events.constants.Enums.Roles_user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -31,8 +31,8 @@ public class CustomUserDetailsService implements UserDetailsService {
     );
   }
 
-  private Collection<? extends GrantedAuthority> getAuthorities(Set<Permission> permissions) {
-    return permissions.stream()
+  private Collection<? extends GrantedAuthority> getAuthorities(Set<Roles_user> rolesusers) {
+    return rolesusers.stream()
       .map(permission -> new SimpleGrantedAuthority("ROLE_" + permission.name()))
       .collect(Collectors.toList());
   }

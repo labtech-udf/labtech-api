@@ -47,20 +47,20 @@ public abstract class GenericServiceImpl<E extends AbstractEntity, D extends Abs
   D executeSave(D d) throws Exception {
     E e = this.mapper.toEntity(d);
     if (d.getId() == null) {
+      e.setCreatedBy(d.getCreatedBy() != null ? d.getCreatedBy() : "admin");
       e.setCreated(LocalDateTime.now());
+      e.setUpdatedBy(d.getUpdatedBy() != null ? d.getUpdatedBy() : "admin");
       e.setUpdated(LocalDateTime.now());
-      e.setUpdatedBy("65d0deed-e8fe-48fa-a637-5077ac320151");
-      e.setCreatedBy("65d0deed-e8fe-48fa-a637-5077ac320151");
     } else {
       Optional<D> beforeOptional = this.findOneById(d.getId());
-      if (!beforeOptional.isPresent()) {
+      if (beforeOptional.isEmpty()) {
         throw new Exception("The entity does not exist");
       }
       D before = beforeOptional.get();
       e.setCreated(before.getCreated());
       e.setCreatedBy(before.getCreatedBy());
       e.setUpdated(LocalDateTime.now());
-      e.setUpdatedBy("65d0deed-e8fe-48fa-a637-5077ac320151");
+      e.setUpdatedBy(d.getUpdatedBy());
     }
     this.repository.save(e);
     return this.mapper.toDto(e);

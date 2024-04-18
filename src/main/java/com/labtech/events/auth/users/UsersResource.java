@@ -4,6 +4,8 @@ import com.labtech.events.auth.TokenService;
 import com.labtech.events.auth.users.records.LoginDTO;
 import com.labtech.events.auth.users.records.RegisterDTO;
 import com.labtech.events.auth.users.records.ResponseDTO;
+import com.labtech.events.auth.users.records.RolesDTO;
+import com.labtech.events.constants.Enums.Roles_user;
 import com.labtech.events.utils.GenericResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @RestController
 @RequestMapping("api")
@@ -25,19 +28,23 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
   private final UsersRepository repository;
   private final TokenService tokenService;
 
+  private final UsersMapper mapper;
+
   public UsersResource(
     UsersService service,
     UsersRepository repository,
     PasswordEncoder passwordEncoder,
-    TokenService tokenService) {
+    TokenService tokenService, UsersMapper mapper) {
     super(service, "api/");
     this.service = service;
     this.repository = repository;
     this.tokenService = tokenService;
     this.passwordEncoder = passwordEncoder;
+    this.mapper = mapper;
   }
 
-  @GetMapping("/public/listUsers")
+  @GetMapping("/private/listUsers")
+  @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
   public List<UsersDTO> listUsers() {
     return service.findAll();
   }
@@ -79,6 +86,19 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
       Users user = this.service.register(body);
       String token = this.tokenService.generateToken(user);
       return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
+    }
+    return ResponseEntity.badRequest().build();
+  }
+
+  @PutMapping("/public/user_roler")
+  public ResponseEntity roles(@RequestBody RolesDTO dto) throws Exception {
+    Optional<Users> usr = this.repository.findByEmail(dto.email());
+    if (usr.isPresent()) {
+      Users user = usr.get();
+      Set<Roles_user> usr_roles = user.getRoles();
+      usr_roles.addAll(dto.roles());
+      this.service.save(mapper.toDto(user));
+      return ResponseEntity.ok().build();
     }
     return ResponseEntity.badRequest().build();
   }
