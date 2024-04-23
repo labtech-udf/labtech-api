@@ -40,7 +40,7 @@ public class TokenController {
   }
 
   @GetMapping("/api/public/user")
-  public List<UserRepresentation> getusers() {
+  public List<UserRepresentation> getUsers() {
     return this.service.getUsers();
   }
 

@@ -61,6 +61,7 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
+          
         </dependency>
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
@@ -132,6 +133,7 @@
     <build>
         <finalName>app</finalName>
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -144,6 +146,7 @@
                     </excludes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>
