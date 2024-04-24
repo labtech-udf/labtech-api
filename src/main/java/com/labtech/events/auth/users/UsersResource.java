@@ -27,7 +27,6 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
   private final PasswordEncoder passwordEncoder;
   private final UsersRepository repository;
   private final TokenService tokenService;
-
   private final UsersMapper mapper;
 
   public UsersResource(
@@ -79,9 +78,9 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
     return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
   }
 
-  @PostMapping("/public/register")
-  public ResponseEntity register(@RequestBody RegisterDTO body) throws Exception {
-    Optional<Users> usr = this.repository.findByEmail(body.email());
+  @PostMapping(value = "/public/auth/register")
+  public ResponseEntity<?> register(@RequestBody RegisterDTO body) throws Exception {
+    Optional<Users> usr = this.repository.findByEmail(body.getEmail());
     if (usr.isEmpty()) {
       Users user = this.service.register(body);
       String token = this.tokenService.generateToken(user);

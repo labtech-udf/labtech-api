@@ -19,6 +19,7 @@ public class AbstractEntity implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @SequenceGenerator(name = "IDS_ENTITY_SEQ", sequenceName = "IDS_ENTITY_SEQ", allocationSize = 1)
   private Long id;
 
   @NotNull

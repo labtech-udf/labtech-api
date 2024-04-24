@@ -42,11 +42,11 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
   @Override
   public Users register(RegisterDTO obj) throws Exception {
     Users user = new Users();
-    user.setEmail(obj.email());
-    user.setName(obj.name());
+    user.setEmail(obj.getEmail());
+    user.setName(obj.getName());
     user.setUid(UUID.randomUUID());
     user.setRoles(Collections.singleton(Roles_user.USER));
-    user.setPassword(passwordEncoder.encode(obj.password()));
+    user.setPassword(passwordEncoder.encode(obj.getPassword()));
     save(mapper.toDto(user));
     return user;
   }
