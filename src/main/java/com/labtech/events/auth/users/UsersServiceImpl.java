@@ -6,10 +6,7 @@ import com.labtech.events.utils.GenericServiceImpl;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implements UsersService {
@@ -50,4 +47,18 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
     save(mapper.toDto(user));
     return user;
   }
+
+  @Override
+  public UsersDTO getUser(Users user) {
+    UsersDTO usr = new UsersDTO();
+    usr.setEmail(user.getEmail());
+    usr.setId(user.getId());
+    usr.setName(user.getName());
+    usr.setRoles(new ArrayList<>(user.getRoles()));
+    usr.setUid(user.getUid());
+    usr.setFoto_capa(user.getFoto_capa());
+    usr.setFoto_perfil(user.getFoto_perfil());
+    return usr;
+  }
+
 }

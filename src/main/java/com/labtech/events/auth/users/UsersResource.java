@@ -66,17 +66,29 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
   public ResponseEntity login(@RequestBody LoginDTO body) {
     Optional<Users> optionalUser = this.repository.findByEmail(body.email());
     if (optionalUser.isEmpty()) {
-      return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuário não encontrado");
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"message\": \"Usuário não encontrado\"}");
     }
 
     Users user = optionalUser.get();
     if (!passwordEncoder.matches(body.password(), user.getPassword())) {
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Senha incorreta");
+      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"message\": \"Senha incorreta\"}");
+
     }
 
     String token = this.tokenService.generateToken(user);
-    return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
+    return ResponseEntity.ok(new ResponseDTO(user.getEmail(), token));
   }
+  @GetMapping("/private/getUser")
+  public ResponseEntity<UsersDTO> getUser(@RequestParam String email) {
+    Optional<Users> usr = this.repository.findByEmail(email);
+    UsersDTO user = new UsersDTO();
+    if (usr.isPresent()) {
+      user = service.getUser(usr.get());
+    }
+    return ResponseEntity.ok(user);
+
+  }
+
 
   @PostMapping(value = "/public/auth/register")
   public ResponseEntity<?> register(@RequestBody RegisterDTO body) throws Exception {
@@ -101,4 +113,5 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
     }
     return ResponseEntity.badRequest().build();
   }
+
 }

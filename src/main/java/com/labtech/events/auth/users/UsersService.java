@@ -13,4 +13,6 @@ public interface UsersService extends GenericService<UsersDTO> {
   Users register(RegisterDTO body) throws Exception;
 
   Optional<Users> findByEmail(String login);
+
+  UsersDTO getUser(Users users);
 }
