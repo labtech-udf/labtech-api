@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -16,9 +18,10 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = false)
 @Table(name = "Arquivo_tb", schema = SchemaConstants.EVENTOS)
 public class Arquivo extends AbstractEntity {
-  String name;
-  String type;
-  String url;
-  Long size;
-  String key;
+  private String name;
+  private String type;
+  private String url;
+  private Long size;
+  private String key;
+  private UUID uid;
 }

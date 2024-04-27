@@ -63,7 +63,7 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
   }
 
   @PostMapping("/public/login")
-  public ResponseEntity login(@RequestBody LoginDTO body) {
+  public ResponseEntity<?> login(@RequestBody LoginDTO body) {
     Optional<Users> optionalUser = this.repository.findByEmail(body.email());
     if (optionalUser.isEmpty()) {
       return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"message\": \"Usuário não encontrado\"}");
@@ -102,7 +102,7 @@ public class UsersResource extends GenericResource<UsersDTO, UsersResource> {
   }
 
   @PutMapping("/public/user_roler")
-  public ResponseEntity roles(@RequestBody RolesDTO dto) throws Exception {
+  public ResponseEntity<?> roles(@RequestBody RolesDTO dto) throws Exception {
     Optional<Users> usr = this.repository.findByEmail(dto.email());
     if (usr.isPresent()) {
       Users user = usr.get();
