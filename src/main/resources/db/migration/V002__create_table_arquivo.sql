@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS eventos.arquivo_tb
     excluded     BOOLEAN,
     updated_date TIMESTAMP(6) NOT NULL,
     updated_by   VARCHAR(255) NOT NULL,
-    uid            UUID      DEFAULT gen_random_uuid() NOT NULL,
+    uid            UUID      DEFAULT gen_random_uuid(),
     key          VARCHAR(255),
     name         VARCHAR(255),
     size         BIGINT,

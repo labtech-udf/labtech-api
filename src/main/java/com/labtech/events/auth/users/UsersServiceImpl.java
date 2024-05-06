@@ -2,6 +2,9 @@ package com.labtech.events.auth.users;
 
 import com.labtech.events.auth.users.records.RegisterDTO;
 import com.labtech.events.constants.Enums.Roles_user;
+import com.labtech.events.files.ArquivoDTO;
+import com.labtech.events.files.ArquivoMapper;
+import com.labtech.events.files.ArquivoService;
 import com.labtech.events.utils.GenericServiceImpl;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -14,15 +17,19 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
   private final UsersRepository repository;
   private final UsersMapper mapper;
   private final PasswordEncoder passwordEncoder;
+  private final ArquivoService arquivoService;
+  private final ArquivoMapper arquivoMapper;
 
   public UsersServiceImpl(
     UsersRepository repository,
-    UsersMapper mapper,
-    PasswordEncoder passwordEncoder) {
+    UsersMapper mapper, PasswordEncoder passwordEncoder,
+    ArquivoService arquivoService, ArquivoMapper arquivoMapper) {
     super(repository, mapper);
     this.repository = repository;
     this.mapper = mapper;
     this.passwordEncoder = passwordEncoder;
+    this.arquivoService = arquivoService;
+    this.arquivoMapper = arquivoMapper;
   }
 
   @Override
@@ -44,6 +51,16 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
     user.setUid(UUID.randomUUID());
     user.setRoles(Collections.singleton(Roles_user.USER));
     user.setPassword(passwordEncoder.encode(obj.getPassword()));
+    user.setFoto_capa(
+      this.arquivoMapper.toEntity(
+        arquivoService.save(new ArquivoDTO())
+      )
+    );
+    user.setFoto_perfil(
+      this.arquivoMapper.toEntity(
+        arquivoService.save(new ArquivoDTO())
+      )
+    );
     save(mapper.toDto(user));
     return user;
   }
