@@ -2,11 +2,14 @@
 
 ## Descrição
 
-Sitema de gestão de usuarios da apliclação de eventos 
+O Labtech Events é um sistema de gerenciamento de eventos universitários que simplifica a organização, registro e
+acompanhamento de eventos acadêmicos. Nossa API fornece uma plataforma robusta e escalável para facilitar a criação,
+gerenciamento e participação em eventos, atendendo às necessidades específicas de instituições de ensino superior.
 
 ## Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado na sua máquina as seguintes ferramentas:
+
 - [Git](https://git-scm.com)
 - [Java 21](https://www.oracle.com/java/technologies/downloads)
 - [Docker](https://www.docker.com/products/docker-desktop)
@@ -36,13 +39,14 @@ $ git clone <url-do-repositorio>
 $ cd nome-do-projeto
 
 #Inicie a aplicaçao
-$ mvn spring-boot:run ou Run pela IDE
+$ mvn spring-boot:run ou execute pela IDE
 
-# O servidor inciará na porta:8760 - acesse <http://localhost:8081/swagger-ui/index.html>
-# O servidor do Keycloak iniciará na porta:8090 - acesse <http://localhost:8090> [Os dados de login estão no arquivo compose]
+# O servidor inciará na porta:8081 - acesse <http://localhost:8081/swagger-ui/index.html>
 ```
 
 ## 🗯️ informações importantes
-- Se estiver no windows antes de iniciar a aplicação, certifique-se que o **DOCKER** esta em funcionamento(abra o docker desktop)
+
+- Antes de iniciar a aplicação, certifique-se que o **DOCKER** esta em funcionamento
 - Ao subir um código fazer [Commits significativos](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
+- Veja como testar a API usando o [POSTMAN](https://www.devmedia.com.br/testando-apis-web-com-o-postman/37264) [Devmedia]
 
