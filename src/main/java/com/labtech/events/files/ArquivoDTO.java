@@ -21,12 +21,10 @@ public class ArquivoDTO extends AbstractEntityDTO {
   private UUID uid;
 
 
-//  public String getUrl() {
-//    if (url != null) {
-//      return UrlConstant.getAbsoluteUrl() + "/" + url + "/download";
-//    } else {
-//      return UrlConstant.getAbsoluteUrl() + "/" + getId() + "/download";
-//    }
-//    return null;
-//  }
+  public String getUrl() {
+    if (getKey() != null) {
+      return UrlConstant.getAbsoluteUrl() + "/api/public/arquivo/get/" + getId();
+    }
+    return null;
+  }
 }

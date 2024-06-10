@@ -47,7 +47,7 @@ public class ArquivoServiceImpl extends GenericServiceImpl<Arquivo, ArquivoDTO> 
     try {
       Files.createDirectories(this.fileStorageLocation);
     } catch (Exception ex) {
-      throw new RuntimeException("Do the L");
+      throw new RuntimeException("Erro ao criar local de arquivos");
     }
   }
 

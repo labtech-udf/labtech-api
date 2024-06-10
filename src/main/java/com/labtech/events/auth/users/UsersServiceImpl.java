@@ -61,7 +61,7 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
         arquivoService.save(new ArquivoDTO())
       )
     );
-    save(mapper.toDto(user));
+    this.save(mapper.toDto(user));
     return user;
   }
 
@@ -73,9 +73,20 @@ public class UsersServiceImpl extends GenericServiceImpl<Users, UsersDTO> implem
     usr.setName(user.getName());
     usr.setRoles(new ArrayList<>(user.getRoles()));
     usr.setUid(user.getUid());
-    usr.setFoto_capa(user.getFoto_capa());
-    usr.setFoto_perfil(user.getFoto_perfil());
+    usr.setFoto_capa(arquivoMapper.toDto(user.getFoto_capa()));
+    usr.setFoto_perfil(arquivoMapper.toDto(user.getFoto_perfil()));
     return usr;
+  }
+
+  @Override
+  public UsersDTO update(final UsersDTO obj) throws Exception {
+    Optional<Users> usr = findByEmail(obj.getEmail());
+    if (usr.isPresent()) {
+      Users user = usr.get();
+      obj.setPassword(user.getPassword());
+      obj.setUpdatedBy(String.valueOf(user.getUid()));
+    }
+    return this.save(obj);
   }
 
 }

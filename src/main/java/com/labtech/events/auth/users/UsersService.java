@@ -15,4 +15,6 @@ public interface UsersService extends GenericService<UsersDTO> {
   Optional<Users> findByEmail(String login);
 
   UsersDTO getUser(Users users);
+
+  UsersDTO update(UsersDTO user) throws Exception;
 }

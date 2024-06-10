@@ -37,7 +37,12 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
         EventoDTO events = new EventoDTO();
         events.setId(i);
         events.setName("Name teste: " + i);
-        events.setDescription("Description test: " + i);
+        events.setDescription("Description Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
+          " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
+          " when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
+          "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." +
+          " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
+          " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
         events.setNameCard("Name Card: " + i);
         events.setCor("#3f83f0");
         Status[] statuses = Status.values();
@@ -47,16 +52,16 @@ public class EventoResource extends GenericResource<EventoDTO, EventoResource> {
           ArquivoDTO arquivo = new ArquivoDTO();
           arquivo.setId(i);
           arquivo.setName("Name file" + i);
-          arquivo.setUrl("https://source.unsplash.com/random");
+          arquivo.setUrl("https://picsum.photos/seed/picsum/4000/2670");
           events.setPhoto(arquivo);
         }
 
         lNew.add(events);
       }
       return lNew;
-    } else {
-      return list;
     }
+    return list;
+
   }
 
   @GetMapping("/public/evento/{id}")
